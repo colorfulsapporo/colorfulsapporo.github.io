@@ -65,7 +65,7 @@ img.header-logo {
 
 .main-pic,
 figcaption:before {
-  background: url("mainpic03.jpg");
+  background: url("./mainpic03.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -124,10 +124,6 @@ main {
 .main-blank {
   height: 10px;
 }
-
-/* .decorator {
-  background-color: rgba(0, 0, 0, 0.7);
-} */
 
 .title {
   font-size: 30px;
