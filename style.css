@@ -1,14 +1,9 @@
 body {
   margin: 0;
-  font-family: 
-    /* "Hiragino Kaku Gothic Pro", */ "Hiragino Maru Gothic ProN W4",
-    Meiryo;
-  /* win用のフォントを決める必要あり */
+  font-family: Hiragino Maru Gothic ProN W4, Meiryo, sans-serif;
 }
 
-/* ページ全体のサイズと位置調整 */
 .container {
-  /* width: 1000px; */
   margin: 0 auto;
 }
 
@@ -16,15 +11,13 @@ p {
   margin: 0;
 }
 
-img {
-  vertical-align: bottom;
-}
-
 /* ヘッダー部分ここから */
+
 header {
-  height: 60px;
+  height: 40px;
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: fixed;
   background-color: white;
@@ -33,29 +26,55 @@ header {
 }
 
 .header-left {
-  flex: 5;
+  flex: 1;
 }
 
-img.header-logo {
-  height: 60px;
-  margin-left: 20px;
+.header-logo {
+  height: 40px;
+  margin-left: 5px;
   display: flex;
   vertical-align: bottom;
 }
 
 .header-right {
-  flex: 3;
+  display: none;
+  /* flex: 3;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+}
+
+.welcome-message {
+  flex: 5;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav {
+  display: none;
+}
+
+.twitter {
+  flex: 1;
+  height: 40px;
+}
+
+.twitter img {
+  height: 30px;
+  vertical-align: middle;
+  margin: 5px;
+  margin-right: 10px;
 }
 
 /* ヘッダーここまで */
-
 /* body部分ここから */
 
 .blank {
-  height: 680px;
+  height: 30px;
+}
+
+.main-blank {
+  height: 10px;
 }
 
 .main-pic img {
@@ -63,9 +82,9 @@ img.header-logo {
   height: auto;
 }
 
-.main-pic,
+/* .main-pic,
 figcaption:before {
-  background: url("../mainpic03.JPG");
+  background: url("../mainpic03.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -94,16 +113,17 @@ figcaption:before {
   margin: 0;
   align-items: center;
   justify-content: center;
-}
+} */
 
 main {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .WhatsNewContainer {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .WhatsNewTitle,
@@ -113,20 +133,17 @@ main {
 
 .ActivityContainer {
   flex: 1;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: 0;
 }
 
 .ActivityComment {
   padding: 20px;
-}
-
-.main-blank {
-  height: 10px;
+  font-size: 14px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 25px;
+  text-align: center;
 }
 
 /* body部分ここまで */
@@ -134,17 +151,158 @@ main {
 /* footerここから */
 
 footer {
-  margin-top: 70px;
-  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-right: 10px;
   height: 60px;
   border-top: 2px rgb(0, 234, 255) solid;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-
-.twitter-icon {
-  margin-left: 10px;
+  text-align: right;
 }
 
 /* footerここまで */
+
+.nav-bottom {
+  display: block;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-bottom ul {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+.nav-bottom li {
+  flex: 1;
+  font-size: 14px;
+  background-color: black;
+  text-align: center;
+}
+
+.nav-bottom li a {
+  text-decoration: none;
+  color: white;
+}
+
+.anchor {
+  display: block;
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+@media (min-width: 600px) {
+  header,
+  .blank {
+    height: 60px;
+  }
+
+  .header-logo {
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .header-right,
+  .welcome-message {
+    display: none;
+  }
+
+  .twitter {
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+
+  .twitter img {
+    height: 30px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .ActivityComment {
+    font-size: 20px;
+  }
+
+  .nav {
+    display: block;
+    width: 100%;
+    margin: 30px;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+    margin-block: 0;
+  }
+
+  .nav li {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: rgb(57, 25, 236);
+  }
+
+  footer {
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+
+  .nav-bottom {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    justify-content: space-around;
+  }
+
+  .header-left {
+    flex: 14;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header-right {
+    display: block;
+    flex: 10;
+    text-align: center;
+  }
+
+  /* .ContactComment {
+    flex: 4;
+    font-size: 11px;
+    text-align: center;
+  } */
+
+  main {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .ActivityContainer {
+    margin-left: 5px;
+  }
+
+  .ActivityComment {
+    font-size: 16px;
+  }
+}
