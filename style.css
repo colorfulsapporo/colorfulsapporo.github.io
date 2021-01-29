@@ -167,14 +167,15 @@ footer {
 /* footerここまで */
 
 .nav-bottom {
-  display: block;
   bottom: 0;
+  margin-bottom: 0;
   position: fixed;
   width: 100%;
 }
 
 .nav-bottom ul {
   list-style: none;
+  margin-bottom: 0;
   display: flex;
   padding-inline-start: 0;
   margin-block: 0;
@@ -186,6 +187,7 @@ footer {
   background-color: black;
   text-align: center;
   border-left: 1px solid #ffffff;
+  border-radius: 2px;
 }
 
 .nav-bottom li:first-child {
