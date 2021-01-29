@@ -11,6 +11,10 @@ p {
   margin: 0;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 /* ヘッダー部分ここから */
 
 header {
@@ -38,10 +42,6 @@ header {
 
 .header-right {
   display: none;
-  /* flex: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 .welcome-message {
@@ -56,14 +56,16 @@ header {
 
 .twitter {
   flex: 1;
-  height: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.twitter img {
+.twitter a {
+  display: block;
+}
+
+.twitter-icon {
   height: 30px;
-  vertical-align: middle;
-  margin: 5px;
-  margin-right: 10px;
 }
 
 /* ヘッダーここまで */
@@ -183,9 +185,15 @@ footer {
   font-size: 14px;
   background-color: black;
   text-align: center;
+  border-left: 1px solid #ffffff;
+}
+
+.nav-bottom li:first-child {
+  border-left: none;
 }
 
 .nav-bottom li a {
+  display: block;
   text-decoration: none;
   color: white;
 }
@@ -207,18 +215,13 @@ footer {
     margin-left: 10px;
   }
 
-  .header-right,
   .welcome-message {
     display: none;
   }
 
   .twitter {
-    margin-left: 5px;
-    margin-right: 20px;
-  }
-
-  .twitter img {
-    height: 30px;
+    /* margin-left: 5px;
+    margin-right: 20px; */
   }
 
   .title {
@@ -230,6 +233,7 @@ footer {
   }
 
   .nav {
+    flex: 8;
     display: block;
     width: 100%;
     margin: 30px;
@@ -245,7 +249,7 @@ footer {
   .nav li {
     flex: 1;
     text-align: center;
-    font-size: 18px;
+    font-size: 2.3vw;
   }
 
   .nav li a {
@@ -269,7 +273,7 @@ footer {
   }
 
   .header-left {
-    flex: 14;
+    flex: 12;
   }
 
   .nav {
@@ -280,13 +284,13 @@ footer {
     display: block;
     flex: 10;
     text-align: center;
+    font-size: min(1.6vw, 18px);
   }
 
-  /* .ContactComment {
-    flex: 4;
-    font-size: 11px;
-    text-align: center;
-  } */
+  .header-right a {
+    text-decoration: none;
+    color: rgb(57, 25, 236);
+  }
 
   main {
     flex-direction: row;
