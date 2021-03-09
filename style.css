@@ -3,8 +3,9 @@ body {
   font-family: Hiragino Maru Gothic ProN W4, Meiryo, sans-serif;
 }
 
-.container {
+.container-fluid {
   margin: 0 auto;
+  padding: 0;
 }
 
 p {
@@ -79,43 +80,10 @@ header {
   height: 10px;
 }
 
-.main-pic img {
+.movie {
   width: 100%;
   height: auto;
 }
-
-/* .main-pic,
-figcaption:before {
-  background: url("../mainpic03.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-figcaption:before {
-  content: "";
-  z-index: -1;
-  -webkit-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.main-pic figcaption {
-  font-size: 50px;
-  color: #ffffff;
-  position: absolute;
-  top: 60px;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-} */
 
 main {
   display: flex;
@@ -224,11 +192,6 @@ footer {
 
   .welcome-message {
     display: none;
-  }
-
-  .twitter {
-    /* margin-left: 5px;
-    margin-right: 20px; */
   }
 
   .title {
